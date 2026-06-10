@@ -27,3 +27,17 @@ def add_item(item: Item):
     response = supabase.table("items").insert({"name": item.name, "price": item.price}).execute()
     return {"message": "Item added", "item": response.data}
 
+@app.patch("/items/{item_id}")
+def update_item(item_id: int, item: Item):
+    response = supabase.table("items").update({
+        "name": item.name,
+        "price": item.price
+    }).eq("id", item_id).execute()
+    return {"message": "Item updated", "item": response.data}
+
+
+@app.delete("/items/{item_id}")
+def delete_item(item_id: int):
+    response = supabase.table("items").delete().eq("id",item_id).execute()
+    return {"message": "Item deleted", "item": response.data}
+

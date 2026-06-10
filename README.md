@@ -1,18 +1,23 @@
 # FastAPI Items API
 
 A REST API built with FastAPI and Supabase (PostgreSQL) backend.
+Deployed live on Railway.
 
-## Tech Stack
+## 🔗 Live Demo
+https://fastapi-demo-production-6ef5.up.railway.app/docs
+
+## 🛠️ Tech Stack
 - FastAPI
 - Supabase (PostgreSQL)
 - Python
 - Uvicorn
+- Railway (Deployment)
 
-## Features
-- GET /items — Fetch all items
-- POST /items — Add new item
+## ✅ Features
+- GET /items — Fetch all items from database
+- POST /items — Add new item to database
 
-## Setup
+## ⚙️ Setup Locally
 
 1. Clone the repo
 2. Install dependencies:
@@ -22,6 +27,4 @@ A REST API built with FastAPI and Supabase (PostgreSQL) backend.
    SUPABASE_KEY=your_key
 4. Run server:
    python -m uvicorn main:app --reload
-
-## API Docs
-Visit http://127.0.0.1:8000/docs for Swagger UI
+5. Open: http://127.0.0.1:8000/docs
